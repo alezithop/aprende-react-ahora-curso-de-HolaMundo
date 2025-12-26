@@ -1,13 +1,15 @@
-import { CardBody } from "./components/Card";
+import Card, { CardBody } from "./components/Card";
 
 function App() {
   // código jsx aquí -> se va a transformar a llamadas de React.createElement
   return (
-    <CardBody
-      title={"Hola Mundo"}
-      text={"Este es un ejemplo de texto para la tarjeta."}
-      // text2={"Este es un texto opcional."} // <- Este texto es un parametro opcional
-    />
+    <Card>
+      <CardBody
+        title="Hola mundo"
+        text="Este es un ejemplo de texto para la tarjeta."
+        // text2="Este es un texto opcional adicional." // <- Este texto es un parametro opcional
+      />
+    </Card>
   );
 }
 
