@@ -2,14 +2,16 @@ import { useState } from "react";
 
 type Props = {
   data: string[];
+  onSelect?: (elemento: string) => void;
 };
 
-function List({ data }: Props) {
+function List({ data, onSelect }: Props) {
   // state hook permite modificar variables dentro de un componente funcional
   // index es la variable que vamos a utilizar y setIndex la función para actualizar el valor de index
   const [index, setIndex] = useState(1);
-  const handleClick = (i: number) => {
+  const handleClick = (i: number, elemento: string) => {
     setIndex(i);
+    onSelect?.(elemento);
     console.log(i);
   };
 
@@ -17,7 +19,7 @@ function List({ data }: Props) {
     <ul className="list-group">
       {data.map((elemento, i) => (
         <li
-          onClick={() => handleClick(i)}
+          onClick={() => handleClick(i, elemento)}
           key={elemento}
           className={`list-group-item ${index === i ? "active" : ""}`}
         >

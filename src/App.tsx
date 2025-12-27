@@ -9,6 +9,14 @@ function App() {
     "Personaje 4",
     "Personaje 5",
   ];
+
+  const handleSelect = (elemento: string) => {
+    console.log("Imprimiendo: ", elemento);
+  };
+
+  const handleSelect2 = (elemento: string) => {
+    console.log("Mostrando: ", elemento);
+  };
   // código jsx aquí -> se va a transformar a llamadas de React.createElement
   return (
     <Card>
@@ -17,7 +25,8 @@ function App() {
         text="Este es un ejemplo de texto para la tarjeta."
         // text2="Este es un texto opcional adicional." // <- Este texto es un parametro opcional
       />
-      <List data={list} />
+      <List data={list} onSelect={handleSelect} />
+      <List data={list} onSelect={handleSelect2} />
     </Card>
   );
 }
