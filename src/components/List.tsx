@@ -26,7 +26,7 @@ function List({ data, onSelect }: Props) {
           {elemento}
         </li>
       ))}
-      <li className="list-group-item">An item</li>
+      {/* <li className="list-group-item">An item</li> */}
     </ul>
   );
 }
