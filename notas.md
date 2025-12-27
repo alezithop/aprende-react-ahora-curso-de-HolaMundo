@@ -151,3 +151,8 @@ function App() {
 
 export default App;
 ```
+
+# React Developer Tools (Chrome version)
+
+Link: https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+![React Developer Tools](./public/ReactDeveloperToolsChrome.png)
