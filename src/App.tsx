@@ -16,20 +16,6 @@ function App() {
     console.log("Imprimiendo: ", elemento);
   };
 
-  // // se encarga de almacenar la lógica de qué es lo que se renderiza y que no.
-  //  renderiza un mensaje diciendo que no hay elementos para mostrar
-  // const contenido = list.length ? (
-  //   <List data={list} onSelect={handleSelect} />
-  // ) : (
-  //   "Sin elementos para mostrar"
-  // );
-
-  // se encarga de almacenar la lógica de qué es lo que se renderiza y que no.
-  // no renderiza un mensaje diciendo que no hay elementos para mostrar
-  const contenido = list.length !== 0 && (
-    <List data={list} onSelect={handleSelect} />
-  );
-
   // código jsx aquí -> se va a transformar a llamadas de React.createElement
   return (
     <Card>
@@ -38,7 +24,11 @@ function App() {
         text="Este es un ejemplo de texto para la tarjeta."
         // text2="Este es un texto opcional adicional." // <- Este texto es un parametro opcional
       />
-      {contenido}
+      {list.length !== 0 ? (
+        <List data={list} onSelect={handleSelect} />
+      ) : (
+        "No hay contenido"
+      )}
     </Card>
   );
 }

@@ -53,6 +53,7 @@ export default App;
 ## Renderizado Condicional
 
 Se encarga de almacenar la lógica de qué es lo que se renderiza y que no.
+Recomendado para cuando el contenido es demasiado largo para calcular qué es lo que se va a mostrar.
 
 ```tsx
 import Card, { CardBody } from "./components/Card";
