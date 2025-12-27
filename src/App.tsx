@@ -1,5 +1,9 @@
 import Card, { CardBody } from "./components/Card";
 import List from "./components/List";
+/**
+ * truthy values: cualquier valor que no sea falsy
+ * falsy values: 0, "", null, undefined, NaN, false
+ */
 
 function App() {
   const list = [
@@ -9,6 +13,8 @@ function App() {
     "Personaje 4",
     "Personaje 5",
   ];
+
+  const list2: string[] = [];
 
   const handleSelect = (elemento: string) => {
     console.log("Imprimiendo: ", elemento);
@@ -20,6 +26,14 @@ function App() {
   // código jsx aquí -> se va a transformar a llamadas de React.createElement
   return (
     <Card>
+      {"" && "String vacio"}
+      {"Hola mundo" && "String hola mundo"}
+      <br />
+      {list2.length && "Mi lista 2"}{" "}
+      {/* <- Se renderiza porque list2.length es 0 (falsy) pero detecta el 0 como un valor
+      // Por eso hay que agregar una evaluación */}
+      {list2.length !== 0 && "Mi lista 2"}{" "}
+      {/* <- Ahora no se renderiza si list2 está vacía (0) */}
       <CardBody
         title="Hola mundo"
         text="Este es un ejemplo de texto para la tarjeta."
