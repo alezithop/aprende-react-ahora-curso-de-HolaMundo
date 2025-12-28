@@ -1,7 +1,12 @@
 import Card, { CardBody } from "./components/Card";
+import Button from "./components/Button";
 import List from "./components/List";
+import { useState } from "react";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+  const handleClick = () => setIsLoading(!isLoading);
+
   const list = [
     "Personaje 1",
     "Personaje 2",
@@ -29,6 +34,12 @@ function App() {
       ) : (
         "No hay contenido"
       )}
+      {
+        <Button isLoading={isLoading} onClick={handleClick}>
+          Hola Mundo
+        </Button>
+        // <Button type="button" class="btn btn-secondary">Secondary</Button>
+      }
     </Card>
   );
 }

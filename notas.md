@@ -1,3 +1,7 @@
+<!-- Atajos -->
+<!-- tsrfce <- atajo del snippet (typescript react functional component export) -->
+<!-- ` <- comillas raras -->
+
 ## Truthy vs Falsy — Ejemplo
 
 ```tsx
@@ -156,3 +160,11 @@ export default App;
 
 Link: https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
 ![React Developer Tools](./public/ReactDeveloperToolsChrome.png)
+
+## Example of checking state
+
+In this case the button is enabled with the hook State true.
+![developerToolsButtonEnabled](./public/developerToolsButtonEnabled.png)
+
+After click on the button the button is disabled and the hook State false.
+![developerToolsButtonDisabled](./public/developerToolsButtonDisabled.png)
