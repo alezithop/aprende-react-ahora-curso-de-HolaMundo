@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 type ButtonProps = {
   children: ReactNode;
-  isLoading: boolean;
+  isLoading?: boolean;
   onClick: () => void;
 };
 
