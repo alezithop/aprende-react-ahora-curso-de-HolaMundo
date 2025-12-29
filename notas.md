@@ -169,3 +169,10 @@ In this case the button is enabled with the hook State true.
 
 After click on the button the button is disabled and the hook State false.
 ![developerToolsButtonDisabled](./public/developerToolsButtonDisabled.png)
+
+## Estructura recomendada de directorios en el curso
+
+- MVC, es la más conocida.
+- Features, es la recomendada cuando el proyecto es muy grande, así cada feature tiene la información de su propio proyecto.
+
+![developerToolsButtonDisabled](./public/EstructuraDirectoriosCursoHolaMundo.png)
