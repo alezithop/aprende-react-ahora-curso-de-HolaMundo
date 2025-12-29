@@ -1,6 +1,7 @@
 <!-- Atajos -->
 <!-- tsrfce <- atajo del snippet (typescript react functional component export) -->
 <!-- ` <- comillas raras -->
+<!-- No se recomienda usar inline style directamente con css (sin bootstrap porque no es muy compatible con animaciones y otras cosas. Hora del video: 1:58:05) -->
 
 ## Truthy vs Falsy — Ejemplo
 
